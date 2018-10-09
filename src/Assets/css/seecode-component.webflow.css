@@ -1,0 +1,1139 @@
+.body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #3f3e3e;
+}
+
+.atm-machine-sidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.atm-machine-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.atm-machine-navbar {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background-color: #f8f8f8;
+  box-shadow: -1px 0 3px 0 rgba(0, 0, 0, .19);
+}
+
+.atm-utility {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90vh;
+}
+
+.atm-screen {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 55%;
+  height: 100%;
+  padding-top: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.atm-keypad {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 45%;
+  height: 100%;
+  padding-top: 20px;
+  padding-right: 0px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.atm-screen-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  height: 400px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-style: none;
+  border-top-color: #000;
+  border-radius: 5px;
+  background-color: hsla(0, 0%, 97%, 0);
+  background-image: url('../images/image4.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.keypad {
+  width: 70%;
+  height: 50%;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.keypad-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 25%;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding-left: 0px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.interaction-keys {
+  display: block;
+  width: 20%;
+  height: 50%;
+  padding-top: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.keypad-cancel-button.keypad-button {
+  text-decoration: none;
+}
+
+.keypad-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 85%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.keypad-button.keypad-cancel-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  margin-bottom: 0px;
+  padding-right: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #d83838;
+  font-size: 15px;
+}
+
+.keypad-button.keypad-modify-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  margin-bottom: 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #b8ca34;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.keypad-button.keypad-enter-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80%;
+  padding-left: 5px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #278d0d;
+  text-decoration: none;
+}
+
+.keypad-icon {
+  width: 18px;
+  height: 18px;
+  margin-top: 0px;
+  margin-right: 5px;
+}
+
+.text-block-3 {
+  height: 20px;
+}
+
+.keypad-row-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  height: 85%;
+  margin-right: 5px;
+  margin-left: 0px;
+  padding-left: 5px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #b4b2b2;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.keypad-letters {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 30%;
+  margin-top: -20px;
+  margin-left: 5px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.atm-operations {
+  padding: 15px;
+}
+
+.atm-operations-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom-style: none;
+  border-bottom-color: #b4b2b2;
+  background-color: hsla(0, 0%, 49%, .14);
+}
+
+.atm-operations-item.active-item {
+  background-color: #7e7e7e;
+  color: #fff;
+}
+
+.atm-landing-page-image {
+  width: 75%;
+  height: 25%;
+  border-radius: 50%;
+  background-image: url('../images/image1.jpg');
+  background-position: 0px 0px;
+  background-size: cover;
+}
+
+.atm-screen-text {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.atm-pincode-input {
+  margin-bottom: 0px;
+  border-style: none none solid;
+  border-width: 1px 1px 2px;
+  border-color: #000 #000 #9c9c9c;
+  background-color: transparent;
+  font-size: 16px;
+  text-align: center;
+}
+
+.atm-navbar-responsive-icon {
+  display: none;
+}
+
+.atm-responsive-sidebar {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .seecode-navbar {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .seecode-editor {
+    width: 50%;
+  }
+  .seecode-preview-hint {
+    width: 50%;
+    height: 99%;
+  }
+  .seecode-hint {
+    padding: 20px;
+    font-size: 12px;
+  }
+  .seecode-footer-buttons {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .seecode-submit-button {
+    margin-left: 5px;
+  }
+  .seecode-preview-button {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .seecode-test-button {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .seecode-feedback-button {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .seecode-language-link {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .seecode-feedback {
+    height: 101.5%;
+  }
+  .left-arrow {
+    width: 28px;
+    height: 28px;
+    background-image: none;
+  }
+  .right-arrow {
+    width: 28px;
+    height: 28px;
+  }
+  .atm-machine-sidebar {
+    width: 200px;
+  }
+  .atm-screen {
+    width: 60%;
+  }
+  .atm-keypad {
+    width: 40%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .atm-screen-content {
+    width: 330px;
+    height: 350px;
+  }
+  .keypad {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .keypad-row {
+    height: 25%;
+    margin-bottom: 0px;
+  }
+  .interaction-keys {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    height: 14%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .keypad-button.keypad-cancel-button {
+    height: 50px;
+    margin-right: 5px;
+    margin-left: 0px;
+    padding-left: 2px;
+    font-size: 13px;
+  }
+  .keypad-button.keypad-modify-button {
+    height: 50px;
+    margin-right: 5px;
+  }
+  .keypad-button.keypad-enter-button {
+    height: 50px;
+  }
+  .keypad-icon {
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
+    margin-right: 1px;
+  }
+  .text-block-3 {
+    font-size: 13px;
+  }
+  .keypad-row-button {
+    width: 30%;
+    height: 75%;
+  }
+  .keypad-number {
+    font-size: 16px;
+  }
+  .keypad-letters {
+    font-size: 14px;
+  }
+  .atm-landing-page-image {
+    width: 70%;
+    height: 18%;
+  }
+  .text-block-4 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .seecode-sidebar {
+    display: none;
+  }
+  .seecode-main-container {
+    margin-left: 0px;
+  }
+  .seecode-code-container {
+    height: 88%;
+  }
+  .seecode-playground-navbar {
+    height: 8vh;
+  }
+  .seecode-playground {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .seecode-editor {
+    width: 100%;
+    height: 59%;
+  }
+  .seecode-preview-hint {
+    display: none;
+  }
+  .seecode-playground-footer {
+    position: fixed;
+    bottom: 0px;
+    height: 8vh;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    border-top-style: none;
+    border-top-width: 1px;
+  }
+  .title {
+    display: none;
+  }
+  .seecode-editor-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 71.5vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-bottom: 0px none #fff;
+  }
+  .seecode-preview {
+    display: none;
+  }
+  .seecode-hint {
+    display: none;
+  }
+  .seecode-footer-buttons {
+    width: 70%;
+    height: 90%;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+  .seecode-submit-button {
+    height: 100%;
+    margin-right: 0px;
+    margin-left: 1px;
+    padding: 10px 10px 0px;
+    border-left-style: none;
+    border-left-color: #28475d;
+    border-radius: 0px;
+    background-color: #0f898a;
+  }
+  .seecode-preview-button {
+    height: 100%;
+    margin-right: 0px;
+    margin-left: 1px;
+    padding: 10px 10px 0px;
+    border-left: 0px none #28475d;
+    border-radius: 0px;
+    background-color: #0161ab;
+  }
+  .seecode-test-button {
+    width: 18%;
+    height: 100%;
+    margin: 10px 0px 10px 1px;
+    padding: 10px 10px 0px 22px;
+    border-right: 0px none #000;
+    border-left: 1px none #28475d;
+    border-radius: 0px;
+    background-color: #d44544;
+  }
+  .seecode-feedback-button {
+    display: block;
+    height: 100%;
+    margin-right: 0px;
+    margin-left: 1px;
+    padding: 10px 10px 0px;
+    border-left: 0px none #28475d;
+    border-radius: 0px;
+    background-color: #fc8e23;
+  }
+  .seecode-footer-language {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .seecode-language-button {
+    width: 130px;
+    height: 100%;
+    margin-left: -15px;
+    border-radius: 0px;
+    background-color: #122634;
+  }
+  .seecode-language-menu {
+    top: -109px;
+  }
+  .seecode-feedback {
+    display: none;
+  }
+  .seecode-console-button {
+    display: block;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #28475d;
+    background-color: #606060;
+    color: #fff;
+    text-decoration: none;
+  }
+  .seecode-landscape-console {
+    display: block;
+    height: 30vh;
+    background-color: rgba(7, 32, 50, .8);
+  }
+  .title-responsive {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 5vh;
+    margin-top: 1px;
+    padding-left: 15px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #072032;
+  }
+  .seecode-landscape-console-content {
+    padding: 10px;
+    font-family: Inconsolata, monospace;
+    color: #f07488;
+    font-size: 13px;
+  }
+  .text-block-2 {
+    display: block;
+  }
+  .seecode-landscape-preview {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #d3d3d3;
+  }
+  .seecode-landscape-feedback {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 38, 52, .72);
+  }
+  .left-arrow {
+    width: 26px;
+    height: 26px;
+    margin-top: 0px;
+  }
+  .right-arrow {
+    width: 26px;
+    height: 26px;
+    margin-top: 0px;
+  }
+  .seecode-version-container {
+    font-size: 12px;
+  }
+  .atm-machine-sidebar {
+    display: none;
+  }
+  .atm-machine-navbar {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .atm-utility {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .atm-screen {
+    width: 100%;
+    height: 60%;
+  }
+  .atm-keypad {
+    width: 100%;
+    height: 40%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+  .atm-screen-content {
+    height: 300px;
+  }
+  .keypad {
+    width: 40%;
+  }
+  .keypad-row {
+    height: 50%;
+  }
+  .interaction-keys {
+    display: block;
+    width: 20%;
+    height: 50%;
+    padding-top: 0px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .keypad-button.keypad-cancel-button {
+    width: 55%;
+    height: 40px;
+  }
+  .keypad-button.keypad-modify-button {
+    width: 55%;
+    height: 40px;
+  }
+  .keypad-button.keypad-enter-button {
+    width: 55%;
+    height: 40px;
+    margin-left: -5px;
+  }
+  .keypad-row-button {
+    width: 20%;
+    padding-right: 2px;
+  }
+  .keypad-number {
+    font-size: 14px;
+  }
+  .keypad-letters {
+    font-size: 12px;
+  }
+  .atm-navbar-responsive-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  .atm-responsive-sidebar {
+    position: absolute;
+    left: 65%;
+    top: 55px;
+    width: 200px;
+    height: 300px;
+    background-color: #f8f8f8;
+  }
+}
+
+@media (max-width: 479px) {
+  .seecode-main-container {
+    display: block;
+    padding-bottom: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .seecode-navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .seecode-back-button {
+    margin-top: 0px;
+    padding-top: 5px;
+  }
+  .seecode-code-container {
+    height: 89%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .seecode-playground-navbar {
+    height: 7vh;
+  }
+  .seecode-playground {
+    position: static;
+    height: 93%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .seecode-editor {
+    width: 100%;
+    height: 94%;
+  }
+  .seecode-preview-hint {
+    display: none;
+    width: 100%;
+    height: 50%;
+  }
+  .seecode-playground-footer {
+    position: fixed;
+    bottom: 0px;
+    display: none;
+    height: 8vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+  }
+  .text-block {
+    margin-left: 5px;
+  }
+  .seecode-editor-content {
+    height: 95%;
+    background-color: #28475d;
+  }
+  .seecode-submit-button {
+    display: block;
+    width: 33%;
+    height: 7vh;
+    margin: 0px -96px 0px 0px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 0px;
+  }
+  .seecode-preview-button {
+    display: block;
+    width: 36%;
+    height: 7vh;
+    margin: 0px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 0px;
+  }
+  .seecode-test-button {
+    display: block;
+    width: 33%;
+    height: 100%;
+    margin: 0px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 0px;
+  }
+  .seecode-feedback-button {
+    display: block;
+    width: 41%;
+    height: 7vh;
+    margin: 0px;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 0px;
+  }
+  .seecode-footer-language {
+    display: none;
+  }
+  .seecode-language-menu {
+    top: -109px;
+  }
+  .seecode-console-button {
+    display: block;
+  }
+  .seecode-landscape-console {
+    display: none;
+  }
+  .seecode-landscape-preview {
+    display: none;
+  }
+  .seecode-landscape-feedback {
+    display: none;
+  }
+  .seecode-playground-portrait-footer {
+    position: static;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 7vh;
+    margin-top: -25px;
+    background-color: #122634;
+  }
+  .seecode-portrait-footer-button {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 33.333%;
+    height: 93%;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px none #000;
+    text-decoration: none;
+  }
+  .seecode-portrait-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    margin-left: 5px;
+  }
+  .seecode-portrait-menu {
+    position: absolute;
+    left: 110px;
+    bottom: 6vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 33.333%;
+    height: 110px;
+    margin-bottom: 1px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #122634;
+  }
+  .seecode-portrait-language-type {
+    position: absolute;
+    left: 106px;
+    bottom: 4px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90px;
+    height: 70px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #606060;
+  }
+  .seecode-version-container {
+    width: 5vh;
+    height: 5vh;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    font-size: 11px;
+  }
+  .atm-screen-content {
+    width: 300px;
+  }
+  .keypad-row {
+    padding-top: 10px;
+  }
+  .interaction-keys {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 35%;
+    height: 70%;
+    padding-top: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+  .keypad-button.keypad-cancel-button {
+    width: 55%;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  .keypad-button.keypad-modify-button {
+    width: 55%;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  .keypad-button.keypad-enter-button {
+    width: 55%;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left: -5px;
+  }
+  .keypad-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .keypad-row-button {
+    width: 40px;
+    height: 100%;
+    padding-right: 3px;
+  }
+  .keypad-letters {
+    margin-right: 2px;
+    font-size: 11px;
+  }
+  .text-block-4 {
+    font-size: 12px;
+  }
+  .text-block-5 {
+    font-size: 12px;
+  }
+  .text-block-6 {
+    margin-left: 2px;
+    font-size: 12px;
+  }
+  .atm-responsive-sidebar {
+    left: 45%;
+    width: 180px;
+  }
+}
