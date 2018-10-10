@@ -7,7 +7,7 @@ const keyArray = [
   { number : 6, letters : ['M', 'N', 'O']},
   { number : 7, letters : ['P', 'R', 'S']},
   { number : 8, letters : ['T', 'U', 'V']},
-  { number : 9, letters : ['W', 'X', 'y']},
+  { number : 9, letters : ['W', 'X', 'Y']},
   { number : 0, letters : ['']}
 ]
 
