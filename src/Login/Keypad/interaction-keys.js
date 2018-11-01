@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { pinCodeChanged } from '../../actions/user'
+import { pinCodeChanged, login } from '../../actions/user'
 
 import cancel_icon from '../../Assets/images/cancel-icon.png'
 import left_arrow_icon from '../../Assets/images/left-arrow-chevron.png'
@@ -13,6 +13,10 @@ class InteractionKeys extends Component {
   pinCodeChanged = () => {
     let newPinCode = this.props.user.pinCode.substring(0, this.props.user.pinCode.length - 1)
     this.props.pinCodeChanged(newPinCode)
+  }
+
+  login = () => {
+    this.props.login(this.props.user.pinCode)
   }
 
   render() {
@@ -32,7 +36,7 @@ class InteractionKeys extends Component {
           </a>
         </div>
         <div className="keypad-row">
-          <a href="#" className="keypad-button keypad-enter-button w-inline-block" >
+          <a href="#" className="keypad-button keypad-enter-button w-inline-block" onClick={this.login}>
           <img src={info_icon} alt="" className="keypad-icon"/>
           <div className="text-block-6">Enter</div>
           </a>
@@ -47,4 +51,4 @@ const mapStateToProps = state => ({
   user : state.user
 })
 
-export default connect(mapStateToProps, { pinCodeChanged })(InteractionKeys)
+export default connect(mapStateToProps, { pinCodeChanged, login })(InteractionKeys)

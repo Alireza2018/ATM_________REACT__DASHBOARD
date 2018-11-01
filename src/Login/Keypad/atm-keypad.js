@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { pinCodeChanged } from '../../actions/user'
+import { pinCodeChanged, selectKey } from '../../actions/user'
 
 import Key from './atm-keys'
 import InteractionKeys from './interaction-keys'
@@ -21,35 +21,52 @@ class KeyPad extends Component {
 
   handleClick = (keyArray) => {
 
+
     let numberOfClicks = keyArray.letters.length + 1
-    let selectedChar = ''
 
-    if(this.currentClickIndex == 0) {
-      selectedChar = keyArray.number
-      this.currentClickIndex = this.currentClickIndex + 1
-      this.setState({
-        selectedChar : this.state.selectedChar + selectedChar
-      })
-    }
-    else {
-      if(this.currentClickIndex > 0 && this.currentClickIndex < numberOfClicks) {
-        selectedChar = keyArray.letters[this.currentClickIndex - 1]
-        this.currentClickIndex = this.currentClickIndex + 1
-        this.setState({
-          selectedChar : this.state.selectedChar + selectedChar
-        })
-      }
-    }
-
-    if(this.currentClickIndex == numberOfClicks) {
+    if(this.props.user.selectedKey != keyArray.number) {
       this.currentClickIndex = 0
     }
 
-    this.props.pinCodeChanged(this.state.selectedChar)
+    if(this.currentClickIndex == 0) {
 
-    console.log('=================== numberOfClicks: ' + numberOfClicks)
-    console.log('=================== this.currentClickIndex: ' + this.currentClickIndex)
-    console.log('=================== selectedChar: ' + selectedChar)
+      this.setState(
+        {selectedChar : this.state.selectedChar.concat(keyArray.number)},
+        () => {
+          this.props.pinCodeChanged(this.state.selectedChar)
+          this.currentClickIndex = this.currentClickIndex + 1
+          this.props.selectKey(keyArray.number)
+          console.log('=================== numberOfClicks: ' + numberOfClicks)
+          console.log('=================== this.currentClickIndex: ' + this.currentClickIndex)
+          console.log('=================== pinCode: ' + this.props.user.pinCode)
+        }
+      )
+
+
+    }
+    else {
+      if(this.currentClickIndex > 0 && this.currentClickIndex < numberOfClicks) {
+        console.log('----------- i am here')
+        this.setState(
+          {selectedChar : this.state.selectedChar.concat(keyArray.letters[this.currentClickIndex - 1])},
+          () => {
+            this.props.pinCodeChanged(this.state.selectedChar)
+            this.currentClickIndex = this.currentClickIndex + 1
+
+            if(this.currentClickIndex == numberOfClicks) {
+              this.currentClickIndex = 0
+            }
+
+            this.props.selectKey(keyArray.number)
+          }
+        )
+
+      }
+    }
+
+
+
+
   }
 
   render() {
@@ -87,4 +104,8 @@ class KeyPad extends Component {
   }
 }
 
-export default connect(null, { pinCodeChanged })(KeyPad)
+const mapStateToProps = state => ({
+  user : state.user
+})
+
+export default connect(mapStateToProps, { pinCodeChanged, selectKey })(KeyPad)
