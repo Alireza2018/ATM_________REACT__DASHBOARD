@@ -54,7 +54,7 @@ class Screen extends Component {
               :
                 <div className="w-form">
                   <a onClick={this.goToGiftCards}>Select a gift card</a>
-                  <a>Change Personal  Information</a>
+                  <a onClick={this.goToGiftCards}> Change Personal  Information</a>
                 </div>
             }
 
