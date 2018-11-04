@@ -89,8 +89,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 400px;
-  height: 400px;
+  width: 95%;
+  height: 95%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -331,7 +331,7 @@
   width: 75%;
   height: 25%;
   border-radius: 50%;
-  background-image: url('../images/image1.jpg');
+  background-image: url('../images/atm.jpg');
   background-position: 0px 0px;
   background-size: cover;
 }
