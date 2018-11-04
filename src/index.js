@@ -4,7 +4,11 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import store from './store'
+
+//React Routes
 import App from './App';
+import GiftCards from './Cards/index'
+
 
 import * as serviceWorker from './serviceWorker';
 
@@ -13,6 +17,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route  exact path="/" component = { App }  />
+        <Route exact path="/gift-cards" component = { GiftCards } />
       </Switch>
     </BrowserRouter>
   </Provider>,

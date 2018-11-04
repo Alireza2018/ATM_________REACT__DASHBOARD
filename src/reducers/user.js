@@ -3,7 +3,8 @@ export default function userReducer( state = {
   pinCode : '',
   user : {},
   selectedKey : 0,
-  error : ''
+  error : '',
+  giftCards : []
 }, action) {
   switch(action.type) {
     case 'PIN_CODE_CHANGED':
@@ -23,6 +24,27 @@ export default function userReducer( state = {
       state = {
         ...state,
         error : action.payload
+      }
+      break
+    case 'GET_ALL_GIFTCARDS_SUCCESS':
+      state = {
+        ...state,
+        giftCards : action.payload
+      }
+      break
+    case 'GET_ALL_GIFTCARDS_ERROR':
+      state = {
+        ...state
+      }
+      break
+    case 'UPDATE_PROFILE_SUCCESS':
+      state = {
+        ...state
+      }
+      break
+    case 'UPDATE_PROFILE_ERROR':
+      state = {
+        ...state
       }
       break
     case 'NEW_KEY_IS_SELECTED':

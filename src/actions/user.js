@@ -29,3 +29,23 @@ export function login(pinCode) {
       })
   }
 }
+
+export function getGiftCards() {
+  let url = `${atmApiUrl}/GiftCards`
+
+  return dispatch => {
+    axios.get(url)
+      .then( (response) => dispatch({ type : 'GET_ALL_GIFTCARDS_SUCCESS', payload : response.data }) )
+      .catch( (error) => dispatch({ type : 'GET_ALL_GIFTCARDS_ERROR', payload : error }))
+  }
+}
+
+export function updateProfile(profileId, newProfile) {
+  let url = `${atmApiUrl}/Profile/${profileId}`
+
+  return dispatch => {
+    axios.put(url, newProfile)
+      .then( (response) => dispatch({ type : 'UPDATE_PROFILE_SUCCESS', payload : response.data }) )
+      .catch( (error) => dispatch({ type : 'UPDATE_PROFILE_ERROR', payload : error }) )
+  }
+}
