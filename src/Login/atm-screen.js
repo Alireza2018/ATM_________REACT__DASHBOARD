@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import { pinCodeChanged } from '../actions/user'
+import { Button } from 'react-bootstrap'
 
 
 class Screen extends Component {
@@ -52,10 +53,13 @@ class Screen extends Component {
                   </div>
                 </div>
               :
-                <div className="w-form">
-                  <a onClick={this.goToGiftCards}>Select a gift card</a>
-                  <a onClick={this.goToGiftCards}> Change Personal  Information</a>
-                </div>
+                
+                  <div className="w-form">
+                  <Button bsStyle='success' bsSize='large' block onClick={this.goToGiftCards}>Select a gift card</Button> 
+                  <br/>
+                  <Button bsStyle='success' bsSize='large' block onClick={this.goToGiftCards}>Change Personal  Information</Button> 
+                  </div>
+                
             }
 
 
