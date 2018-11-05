@@ -61,9 +61,17 @@ class Screen extends Component {
                     <form id="email-form" name="email-form" data-name="Email Form" className="atm-pincode-form">
                       <input type="password" className="atm-pincode-input w-input" maxLength="256" name="pincode" data-name="pincode" id="pincode"
                         value={ this.props.user.pinCode }
-                        onChange={this.handleChange}/>
+                        onChange={this.handleChange}
+                          />
+                        
                     </form>
                   </div>
+                  {
+                    (Object.keys(this.props.user.errorLogin).length > 0)  ?
+                      <p>Wrong pin code</p>
+                    :
+                      <div></div>
+                  }
                 </div>
               :
                 
@@ -75,6 +83,12 @@ class Screen extends Component {
                 
             }
 
+            {
+              !this.props.user.isValidPincode ?
+                <p>Please enter a 4 digit only pin code</p>
+              :
+                <div></div>
+            }
 
 
 

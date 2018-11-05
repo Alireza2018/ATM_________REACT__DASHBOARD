@@ -14,6 +14,18 @@ export function pinCodeChanged(pinCode) {
   }
 }
 
+export function isValidPincode(flag) {
+  return dispatch => {
+    dispatch({ type : 'IS_VALID_PINCODE', payload : flag })
+  }
+}
+
+export function setProfileData(newProfile) {
+  return dispatch => {
+    dispatch({ type : 'SET_PROFILE_DATA', payload : newProfile })
+  }
+}
+
 export function login(pinCode) {
   let url = `${atmApiUrl}/UserLogin`
   const data = {
@@ -37,6 +49,16 @@ export function getGiftCards() {
     axios.get(url)
       .then( (response) => dispatch({ type : 'GET_ALL_GIFTCARDS_SUCCESS', payload : response.data }) )
       .catch( (error) => dispatch({ type : 'GET_ALL_GIFTCARDS_ERROR', payload : error }))
+  }
+}
+
+export function getUserProfile(profileId) {
+  let url = `${atmApiUrl}/Profile/${profileId}`
+
+  return dispatch => {
+    axios.get(url)
+         .then( (response) => dispatch({ type : 'GET_USER_PROFILE_SUCCESS' , payload : response.data }))
+         .catch( (error) => dispatch({ type : 'GET_USER_PROFILE_ERROR' , payload : error }))
   }
 }
 

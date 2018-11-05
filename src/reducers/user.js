@@ -1,9 +1,11 @@
 export default function userReducer( state = {
 
   pinCode : '',
+  isValidPincode : true,
   user : {},
+  profile : {},
   selectedKey : 0,
-  error : '',
+  errorLogin : '',
   giftCards : []
 }, action) {
   switch(action.type) {
@@ -14,6 +16,11 @@ export default function userReducer( state = {
         pinCode : action.payload
       }
       break
+    case 'IS_VALID_PINCODE' :
+      state = {
+        ...state,
+        isValidPincode : action.payload
+      }
     case 'SUCCESSFUL_USER_LOGIN':
       state = {
         ...state,
@@ -23,7 +30,7 @@ export default function userReducer( state = {
     case 'FAILED_USER_LOGIN':
       state = {
         ...state,
-        error : action.payload
+        errorLogin : action.payload
       }
       break
     case 'GET_ALL_GIFTCARDS_SUCCESS':
@@ -35,6 +42,18 @@ export default function userReducer( state = {
     case 'GET_ALL_GIFTCARDS_ERROR':
       state = {
         ...state
+      }
+      break
+    case 'SET_PROFILE_DATA':
+      state = {
+        ...state,
+        profile : action.payload
+      }
+      break
+    case 'GET_USER_PROFILE_SUCCESS':
+      state = {
+        ...state,
+        profile : action.payload
       }
       break
     case 'UPDATE_PROFILE_SUCCESS':

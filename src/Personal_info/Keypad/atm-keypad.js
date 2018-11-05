@@ -1,72 +1,16 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-
-import { pinCodeChanged, selectKey } from '../../actions/user'
 
 import Key from './atm-keys'
 import InteractionKeys from './interaction-keys'
 import keyArray  from '../../utilities/keys'
 
-
-
 class KeyPad extends Component {
 
   constructor(props) {
     super(props)
-    this.currentClickIndex = 0
-    this.state = {
-      selectedChar : ''
-    }
-  }
-
-  handleClick = (keyArray) => {
-
-    let numberOfClicks = keyArray.letters.length + 1
-
-    if(this.props.user.selectedKey != keyArray.number) {
-      this.currentClickIndex = 0
-    }
-
-    if(this.currentClickIndex == 0) {
-
-      this.setState(
-        {selectedChar : this.state.selectedChar.concat(keyArray.number)},
-        () => {
-          this.props.pinCodeChanged(this.state.selectedChar)
-          this.currentClickIndex = this.currentClickIndex + 1
-          this.props.selectKey(keyArray.number)
-          console.log('=================== numberOfClicks: ' + numberOfClicks)
-          console.log('=================== this.currentClickIndex: ' + this.currentClickIndex)
-          console.log('=================== pinCode: ' + this.props.user.pinCode)
-        }
-      )
-
-
-    }
-    else {
-      if(this.currentClickIndex > 0 && this.currentClickIndex < numberOfClicks) {
-        console.log('----------- i am here')
-        this.setState(
-          {selectedChar : this.state.selectedChar.concat(keyArray.letters[this.currentClickIndex - 1])},
-          () => {
-            this.props.pinCodeChanged(this.state.selectedChar)
-            this.currentClickIndex = this.currentClickIndex + 1
-
-            if(this.currentClickIndex == numberOfClicks) {
-              this.currentClickIndex = 0
-            }
-
-            this.props.selectKey(keyArray.number)
-          }
-        )
-
-      }
-    }
-
-
-
 
   }
+
 
   render() {
     return(
@@ -103,8 +47,5 @@ class KeyPad extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  user : state.user
-})
 
-export default connect(mapStateToProps, { pinCodeChanged, selectKey })(KeyPad)
+export default KeyPad

@@ -16,7 +16,7 @@ class GiftCards extends Component {
 
         <div className="atm-machine-container">
           <div className="atm-machine-navbar">
-            <div>Welcome to our ATM System</div>
+            <h3>Welcome to Gift Card Page</h3>
               <img src={menu_icon} alt="" className="atm-navbar-responsive-icon"/>
             <div className="atm-responsive-sidebar"></div>
           </div>

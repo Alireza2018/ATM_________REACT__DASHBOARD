@@ -7,15 +7,28 @@ import Cards from './gift-cards'
 
 class Screen extends Component {
 
-  componentDidMount = () => {
+  constructor(props) {
+    super(props)
+    this.state = {
+
+    }
+  }
+
+  componentDidMount = (card) => {
     this.props.getGiftCards()
+  }
+
+  selectCard = (amount) => {
+    alert('You have selected: ' + amount + ' NOK gift card')
+   
   }
 
   render() {
 
     let cardItems = this.props.user.giftCards.map( (card, i) => {
       return(
-        <Cards amount={card.amount} cardNumber={card.cardNumber} cssIdentifier={i} key={i} />
+        <Cards amount={card.amount} cardNumber={card.cardNumber} cssIdentifier={i} key={i} 
+          onClick={ () => {this.selectCard(card.amount)} }/>
       )
     })
 
