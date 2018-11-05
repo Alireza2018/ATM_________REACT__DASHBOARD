@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import { pinCodeChanged } from '../actions/user'
 import { Button } from 'react-bootstrap'
+import { Label } from 'react-bootstrap'
 
 
 class Screen extends Component {
@@ -12,7 +13,8 @@ class Screen extends Component {
     super(props)
     this.state = {
       isLoggedIn : false,
-      redirectToGiftCards : false
+      redirectToGiftCards : false,
+      redirectToPersonalInfo: false
     }
   }
 
@@ -31,10 +33,18 @@ class Screen extends Component {
     this.setState({ redirectToGiftCards : true })
   }
 
+  goToPersonalInfo = () => {
+    this.setState({redirectToPersonalInfo: true})
+  }
+
   render() {
 
     if(this.state.redirectToGiftCards) {
       return <Redirect push to='/gift-cards' />
+    }
+
+    if(this.state.redirectToPersonalInfo){
+      return <Redirect push to='/personal-info' />
     }
 
     return(
@@ -43,7 +53,10 @@ class Screen extends Component {
             {
               (Object.keys(this.props.user.user).length == 0) ?
                 <div>
-                  <div className="atm-screen-text">Enter Your Pin Code</div>
+                  <div className="atm-screen-text">
+                  <Label bsStyle="success" bsSize='large'>Please</Label> <Label bsStyle="info">Enter Your Pin Code</Label>{' '}
+                  </div>
+                  
                   <div className="w-form">
                     <form id="email-form" name="email-form" data-name="Email Form" className="atm-pincode-form">
                       <input type="password" className="atm-pincode-input w-input" maxLength="256" name="pincode" data-name="pincode" id="pincode"
@@ -57,7 +70,7 @@ class Screen extends Component {
                   <div className="w-form">
                   <Button bsStyle='success' bsSize='large' block onClick={this.goToGiftCards}>Select a gift card</Button> 
                   <br/>
-                  <Button bsStyle='success' bsSize='large' block onClick={this.goToGiftCards}>Change Personal  Information</Button> 
+                  <Button bsStyle='success' bsSize='large' block onClick={this.goToPersonalInfo}>Change Personal Information</Button> 
                   </div>
                 
             }

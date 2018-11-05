@@ -9,6 +9,7 @@ import store from './store'
 //React Routes
 import App from './App';
 import GiftCards from './Cards/index'
+import PersonalInfo from './Personal_info/index'
 
 
 import * as serviceWorker from './serviceWorker';
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Switch>
         <Route  exact path="/" component = { App }  />
         <Route exact path="/gift-cards" component = { GiftCards } />
+        <Route exact path="/personal-info" component = { PersonalInfo } />
       </Switch>
     </BrowserRouter>
   </Provider>,
