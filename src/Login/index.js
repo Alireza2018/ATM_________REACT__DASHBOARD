@@ -8,8 +8,9 @@ import menu_icon from '../Assets/images/menu_icon.png'
 
 
 class Index extends Component {
-
-  render() {
+    
+  
+   render() {
     return(
       <div className="body">
         <div className="atm-machine-sidebar">
@@ -18,7 +19,7 @@ class Index extends Component {
 
         <div className="atm-machine-container">
           <div className="atm-machine-navbar">
-            <div>Welcome to our ATM System</div>
+            <h3>Welcome to our ATM System</h3>
               <img src={menu_icon} alt="" className="atm-navbar-responsive-icon"/>
             <div className="atm-responsive-sidebar"></div>
           </div>

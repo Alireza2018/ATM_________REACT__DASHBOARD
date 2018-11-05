@@ -4,6 +4,7 @@
   display: -ms-flexbox;
   display: flex;
   background-color: #3f3e3e;
+  text-align: center;
 }
 
 .atm-machine-sidebar {
@@ -36,11 +37,12 @@
 
 .atm-machine-navbar {
   width: 100%;
-  padding-top: 20px;
+  padding-top: 5px;
   padding-bottom: 10px;
   padding-left: 20px;
   background-color: #f8f8f8;
   box-shadow: -1px 0 3px 0 rgba(0, 0, 0, .19);
+  text-transform: uppercase;
 }
 
 .atm-utility {
